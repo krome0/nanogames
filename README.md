@@ -1,7 +1,7 @@
 # Nano Games
 Just making some games in Python for fun.
 
-##Games
+## Games
 2048 Game (Number and Size adjustable)
 
 ## To-Do
