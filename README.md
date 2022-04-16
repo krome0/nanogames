@@ -11,11 +11,11 @@ Minesweeper
 Text RPG Game
 Text or Tile Graphic Rogue-like Game
 
-###System
+### System
 Unified Point System
 Point Database Server
 Gameplay Discord Bot
 Gameplay Windows program
 
-#####(Maybe later)
+##### (Maybe later)
 Gameplay web application
