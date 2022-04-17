@@ -1,4 +1,3 @@
-import py
 import pyxel
 
 class pyxel_app():
