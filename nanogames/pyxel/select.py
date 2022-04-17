@@ -10,7 +10,7 @@ class Config():
     INTRO_TIME = 1.6
     TITLE = 'Nano Games'
 
-class select():
+class Select():
     def __init__(self) -> None:
         pyxel.init(Config.WIDTH, Config.HEIGHT, title=Config.TITLE, fps=Config.FPS)
         pyxel.mouse(True)
