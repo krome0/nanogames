@@ -1,8 +1,9 @@
 import pyxel
 import nanogames.pyxel.games_list as games_list
 import nanogames.pyxel.intro as intro
+import nanogames.pyxel.utils as utils
 
-class Config():
+class Config:
     FPS = 30 
     WIDTH = 200
     HEIGHT = 150
@@ -11,14 +12,15 @@ class Config():
     INTRO_TIME = 1.6
     TITLE = 'Nano Games'
 
-class Select():
+class Select:
     def __init__(self) -> None:
         pyxel.init(Config.WIDTH, Config.HEIGHT, title=Config.TITLE, fps=Config.FPS)
         pyxel.mouse(True)
+        self.colors = utils.Colors()
         pyxel.run(self.update, self.draw)
         
     def draw(self) -> None:
-        intro.intro()
+        intro.intro(Config.WIDTH, Config.HEIGHT)
         
         if pyxel.frame_count/Config.FPS >= Config.INTRO_TIME:
             self.clear_screen()
