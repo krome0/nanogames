@@ -1,5 +1,6 @@
 import pyxel
 import nanogames.pyxel.games_list as games_list
+import nanogames.pyxel.intro as intro
 
 class Config():
     FPS = 30 
@@ -17,24 +18,23 @@ class Select():
         pyxel.run(self.update, self.draw)
         
     def draw(self) -> None:
-        self.intro()
+        intro.intro()
         
         if pyxel.frame_count/Config.FPS >= Config.INTRO_TIME:
             self.clear_screen()
-        games_list.game2048(
-        Config.WIDTH/4-Config.LIST_SIZE, 
-        Config.HEIGHT/4-Config.LIST_SIZE,
-        Config.LIST_SIZE,
-        Config.LIST_SIZE,
-        )
+            games_list.game2048(
+            Config.WIDTH/4-Config.LIST_SIZE,
+            Config.HEIGHT/2-Config.LIST_SIZE-10,
+            Config.LIST_SIZE,
+            Config.LIST_SIZE,
+            color=14
+            )
 
     def update(self) -> None:
         if pyxel.btnp(pyxel.KEY_ESCAPE):
             pyxel.quit()
 
-    def intro(self) -> None:
-        pyxel.cls(0)
-        pyxel.text(Config.WIDTH/2, Config.HEIGHT/2, 'Made by Krome', 7)
-
     def clear_screen(self, color:pyxel.colors = 0) -> None:
         pyxel.cls(color)
+
+Select()
