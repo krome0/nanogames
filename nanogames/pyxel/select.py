@@ -21,7 +21,8 @@ class Select():
         
         if pyxel.frame_count/Config.FPS >= Config.INTRO_TIME:
             self.clear_screen()
-        games_list.game2048(Config.WIDTH/4-Config.LIST_SIZE, 
+        games_list.game2048(
+        Config.WIDTH/4-Config.LIST_SIZE, 
         Config.HEIGHT/4-Config.LIST_SIZE,
         Config.LIST_SIZE,
         Config.LIST_SIZE,
