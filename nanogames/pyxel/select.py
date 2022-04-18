@@ -38,5 +38,3 @@ class Select():
 
     def clear_screen(self, color:pyxel.colors = 0) -> None:
         pyxel.cls(color)
-
-select()
