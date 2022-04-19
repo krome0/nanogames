@@ -1,5 +1,8 @@
 {
     "colors":{
-        
+        "Retro_Blue":[1, 7],
+        "Retro_Green":[7, 3],
+        "Black_White":[0, 7],
+        "White_Black":[7, 0]
     }
 }
